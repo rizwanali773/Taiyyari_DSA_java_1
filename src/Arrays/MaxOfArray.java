@@ -12,7 +12,8 @@ public class MaxOfArray {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int max = arr[0];
+        // int max = arr[0];
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > max)
                 max = arr[i];
