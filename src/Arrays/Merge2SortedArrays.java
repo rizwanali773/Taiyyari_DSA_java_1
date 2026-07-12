@@ -2,11 +2,11 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class Merge2SortedArrarys {
+public class Merge2SortedArrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter size of  first array: ");
+        System.out.print("Enter size of first array: ");
         int m = sc.nextInt();
 
         System.out.print("Enter elements of first array : ");
