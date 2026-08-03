@@ -45,7 +45,7 @@ public class OptimisedBubbleSort {
             /*
             // Another way
             int swaps = 0;
-            for (int i = 0; i < n; i++){
+            for (int i = 0; i < n - i; i++){
                 if (arr[i] > arr[i + 1]){
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
