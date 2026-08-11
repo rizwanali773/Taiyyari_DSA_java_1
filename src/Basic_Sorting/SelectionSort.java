@@ -24,7 +24,7 @@ public class SelectionSort {
         int n = arr.length;
 
         // Algorithm
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n - 1; i++) {
             // 1. Selecting the minimum element in unsorted part of array
             int min = Integer.MAX_VALUE;
             int mindx = -1; //index of minimum element
