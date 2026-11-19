@@ -26,10 +26,43 @@ public class UnionOf2Arrays {
         }
 
         ArrayList<Integer> al = new ArrayList<>();
-        //al = union_of_2_sorted_arrays(a, b);
+        al = union_of_2_sorted_arrays(a, b);
 
         System.out.print("Union Of Array: ");
         System.out.println(al);
+    }
+
+    public static ArrayList<Integer> union_of_2_sorted_arrays(int[] a, int[] b) {
+        ArrayList<Integer> al = new ArrayList<>();
+        int i = 0, j = 0;
+
+        while (i < a.length && j < b.length) {
+            if (a[i] <= b[j]) {
+                addIfNotDuplicate(al, a[i]);
+                i++;
+            } else {
+                addIfNotDuplicate(al, b[j]);
+                j++;
+            }
+        }
+
+        while (i < a.length) {
+            addIfNotDuplicate(al, a[i]);
+            i++;
+        }
+
+        while (j < b.length) {
+            addIfNotDuplicate(al, b[j]);
+            j++;
+        }
+
+        return al;
+    }
+
+    private static void addIfNotDuplicate(ArrayList<Integer> al, int val) {
+        if (al.isEmpty() || al.get(al.size() - 1) != val) {
+            al.add(val);
+        }
     }
 
 
